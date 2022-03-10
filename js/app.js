@@ -118,7 +118,8 @@ const createPost = (post) => {
                     </a>
 
                     <span>Liked by
-                      <a class="post__name--underline" href="#">user123</a> and
+
+                      <a class="post__name--underline" href="#">${post.comments[0].user}</a> and
                       <a href="#">73 others</a></span>
                   </div>
 
@@ -127,9 +128,10 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments?.user}
+                      ${post?.comments[0]?.user}
                       </a>
-                      ${post.comments?.text}
+                      <br>
+                      ${post?.comments[0]?.text}
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
