@@ -237,6 +237,17 @@ img {
   margin: 10px 0;
   color: gray;
 }
+.blog-container {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+.blog {
+  background: #040618;
+  color: white;
+  padding: 40px;
+}
 
 #liked{
   display: none;
