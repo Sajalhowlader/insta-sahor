@@ -242,11 +242,18 @@ img {
   margin: 0 auto;
   padding: 20px 0px;
 }
-
+.blog-title {
+  text-align: center;
+  color: rebeccapurple;
+  font-family: arial black;
+  padding: 15px 0px;
+}
 .blog {
   background: #040618;
   color: white;
   padding: 40px;
+  margin: 20px 0px;
+  border-radius: 10px;
 }
 
 #liked{

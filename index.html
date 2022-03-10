@@ -78,7 +78,7 @@ When we set synchronous function it will reach call stuck in the browser. But wh
     <section>
         <div class="blog-container">
             <div class="blog">
-                <h2> How does javascript work.</h2>
+                <h2 class="blog-title"> How does JAVASCRIPT work.</h2>
                 <strong>
                     javascript is interpreted, compiled, single-theted,event-givent language. It's a client-side
                     scripting language.Its run both of browser and server . When we write code in our code editor, its
@@ -90,6 +90,23 @@ When we set synchronous function it will reach call stuck in the browser. But wh
                     Here are two types of scope first one global scope and the second one is block scope. We can access
                     global variables anywhere in our code. But we can access block variables anywhere in our code cause
                     its blocked.
+                </strong>
+            </div>
+            <div class="blog">
+                <h2 class="blog-title"> How does EVENT LOOP work.</h2>
+                <strong>
+                    Event loop: 1. render Queue 2. call back queue 3. microtask queue. <br>
+                    When we set synchronous function it will reach call stuck in the browser. But when we set an
+                    asynchronous function it will reach web api. If my call stuck is busy, my asynchronous function is
+                    processing web api. When my call stuck is free my processing asynchronous function reaches call back
+                    queue and call back queue sent the processing asynchronous function to call stack and finally
+                    showing
+                    the output in the browser. The name of the combination between the two functions (call back queue
+                    and call stack)is EVENT LOOP.
+                    When we fetch big data from anywhere and show it in our UI if we do it synchronously, it's a lengthy
+                    process. The browser hangs until our data is loaded. In this situation event loop help to fetch our
+                    data easily. There is no fear of crashing our program.
+
                 </strong>
             </div>
 
