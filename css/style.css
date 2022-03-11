@@ -255,6 +255,21 @@ img {
   margin: 20px 0px;
   border-radius: 10px;
 }
+.gird-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #040618;
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  grid-gap: 100px;
+}
+.gird-container h2{
+  text-align: center;
+  color: rebeccapurple;
+  border-bottom: 2px solid white ;
+  margin-bottom: 14px;
+}
 
 #liked{
   display: none;

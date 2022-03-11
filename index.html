@@ -103,13 +103,40 @@ When we set synchronous function it will reach call stuck in the browser. But wh
                     showing
                     the output in the browser. The name of the combination between the two functions (call back queue
                     and call stack)is EVENT LOOP.
-                    When we fetch big data from anywhere and show it in our UI if we do it synchronously, it's a lengthy
-                    process. The browser hangs until our data is loaded. In this situation event loop help to fetch our
-                    data easily. There is no fear of crashing our program.
+                    When we fetch big data from anywhere and show it in our UI if we do it synchronously . The browser
+                    hangs until our data is loaded.When all data is loaded then the event loop call the rander queue and
+                    show the output in the browser. It's a lengthy
+                    process.In this situation event loop help to fetch our
+                    data easily. There is no fear of crashing our program.When we create a promise(new promise) in our
+                    function it will store browser api. When my call stuck is is free browser api sent my (promise
+                    function) to (microtask queue).Event loop gives it first priority and sent call stuck before call
+                    back queue initialize.
 
                 </strong>
             </div>
-
+            <div class="gird-container ">
+                <div>
+                    <h2>Local storage</h2>
+                    <ol>
+                        <li>The size of the local storage is 10 MB. Some people call it 5 MB</li>
+                        <li>
+                            The data has to be cleared manually
+                        </li>
+                        <li>
+                            Works for any tab, not for any specific tab
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <h2>Season Storage</h2>
+                    <ol>
+                        <li>The size of the season storage is 5 MB.</li>
+                        <li>Closing the browser or tab clears the local storage data</li>
+                        <li>Works for any specific tab, tab or browser
+                            When closed, all data is deleted</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </section>
     <footer></footer>
