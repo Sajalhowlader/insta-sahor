@@ -34,9 +34,6 @@ const displayContent = (text) => {
 const switchTab = (id) => {
 
 
-  // const sectionContainerValue = sectionConatainer.innerHTML;
-
-
   if (id === "posts") {
     document.getElementById("posts").style.display = "grid";
     document.getElementById("liked").style.display = "none";
@@ -165,6 +162,7 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+  document.getElementById("reported").innerHTML = ''
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {
     const div = createPost(post);
