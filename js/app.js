@@ -22,42 +22,44 @@ const addToLiked = (id) => {
 };
 
 const reportPost = (id) => {
-  console.log(id)
   reportedPostsId.push(id);
   const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
   showPosts(remainingPosts);
 };
 
 const displayContent = (text) => {
-
-  // return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
-  // return text.length < 30 ? text.length :
-  // if (text.length < 30) {
-  //   return text
-  // } else {
-  //   return text.slice(0, 15)
-  // }
   return text.length < 30 ? text : text.slice(0, 20) + "... read more"
 };
 
 const switchTab = (id) => {
+
+
+  // const sectionContainerValue = sectionConatainer.innerHTML;
+
+
   if (id === "posts") {
     document.getElementById("posts").style.display = "grid";
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
+    document.getElementById('section-cotainer').style = 'block'
+
   } else if (id === "liked") {
     document.getElementById("liked").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
+    document.getElementById('section-cotainer').style.display = 'none'
 
     displayLikedPosts();
   } else {
     document.getElementById("reported").style.display = "block";
+    document.getElementById('section-cotainer').style.display = 'none'
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
 
     displayReportedPosts();
+
   }
+
 };
 
 const createPost = (post) => {
@@ -143,12 +145,11 @@ const createPost = (post) => {
 };
 
 const showPosts = (posts) => {
-  console.log(posts)
+
   const productsContainer = document.getElementById("posts");
   productsContainer.innerHTML = "";
 
   posts.forEach((post) => {
-    console.log(post)
     const div = createPost(post);
     productsContainer.appendChild(div);
   });
